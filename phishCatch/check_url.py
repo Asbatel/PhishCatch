@@ -22,10 +22,9 @@ def testURL(url):
     print(featureList)
     tolerance = 19 - len(featureList)
 
-    if tolerance > 0:
-        while tolerance > 0:
-            featureList.append(0)
-            tolerance-=1
+    while tolerance > 0:
+	featureList.append(0)
+        tolerance-=1
 
 
     shapedArray = np.array(featureList)
