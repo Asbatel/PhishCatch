@@ -23,7 +23,7 @@ def testURL(url):
     tolerance = 19 - len(featureList)
 
     while tolerance > 0:
-	featureList.append(0)
+        featureList.append(0)
         tolerance-=1
 
 
@@ -34,7 +34,6 @@ def testURL(url):
     result = loaded_model.predict(finalShape)
 
     print("Checking -> " + url)
-    print(result)
     if int(result) == 1:
         print("phishing")
     else:
