@@ -57,31 +57,18 @@ for train_index, test_index in kfold.split(X):
     maxVote = VotingClassifier(estimators=[('lr', classifier1), ('svc', classifier2), ('knn', classifier3), ('rf', classifier4)], voting='soft')
     maxVote.fit(X_train, y_train)
     y_pred = maxVote.predict(X_test)
-    TP = 0.0
-    TN = 0.0
-    FP = 0.0
-    N = 0.0
-    P = 0.0
 
-    for i in range(len(y_test)):
-        if y_test[i]:
-	        P = P + 1
-        else:
-            N = N + 1
-        if y_test[i] == y_pred[i] == 1:
-            TP = TP + 1
-        if y_test[i] == y_pred[i] == 0:
-            TN = TN + 1
-        if y_test[i] == 0 and y_pred[i] == 1:
-            FP = FP + 1
-    Accuracy = (TP + TN) / (P + N)
-    Recall = TP / P
-    Specificity = TN / N
+    TN, FP, FN, TP = confusion_matrix(y_test, y_pred).ravel()
+
+    Accuracy = (TP + TN) / (TP + TN + FP + FN)
+    Recall = TP / (TP + FN)
+    Specificity = TN / (FN + TN)
     Precision = TP / (TP + FP)
     totalAccuracy += Accuracy
     totalRecall += Recall
     totalSpecificity += Specificity
     totalPrecision += Precision
+
     print ('Accuracy: ' + str(Accuracy))
     print ('Recall: ' + str(Recall))
     print ('Specificity: ' + str(Specificity))
