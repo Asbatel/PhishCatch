@@ -11,10 +11,6 @@ from sklearn.ensemble import VotingClassifier
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 
-if len(sys.argv) != 2:
-    print ('Usage: ml_template <dataFile>')
-    sys.exit()
-
 
 dataFile = sys.argv[1]
 
