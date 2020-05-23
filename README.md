@@ -14,7 +14,7 @@ Our framework has been evaluated against 50,000 recent URLS from <a href="https:
 # Installation and Usage
 
 To test a URL:
-- Download or clone the repo (git clone https://github.com/Asbatel/AndroSA.git)
+- Download or clone the repo (git clone https://github.com/Asbatel/PhishCatch.git)
 - Navigate to the main directory `cd phishCatch/`
 - Run the following command: `python check_url.py <url_path>`
 
