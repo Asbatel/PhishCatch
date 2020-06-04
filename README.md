@@ -9,7 +9,7 @@ A framework for analysis and detection of phishing URLs using Ensemble Learning.
 
 # Evaluation
 
-Our framework has been evaluated against 50,000 recent URLS from <a href="https://www.phishtank.com/">Phishtank</a>. Our Maxvote-based approach yields an accuracy of 93.2%, which is nearly comparable to state-of-the-art techniques.
+Our framework has been evaluated against 50,000 recent URLs from <a href="https://www.phishtank.com/">Phishtank</a>. Our Maxvote-based approach yields an accuracy of 93.2%, which is nearly comparable to state-of-the-art techniques.
    
 # Installation and Usage
 
