@@ -11,8 +11,6 @@ import time
 from dateutil.parser import parse as date_parse
 import sys
 import ssl
-import socket
-from bs4 import BeautifulSoup
 import datetime
 
 
