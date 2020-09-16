@@ -1,0 +1,8 @@
+numpy==1.19.2
+scikit-learn==0.22.2.post1
+beautifulsoup4==4.9.1
+requests==2.24.0
+google==3.0.0
+whois==0.9.7
+python-dateutil==2.8.1
+google-search==1.0.2
